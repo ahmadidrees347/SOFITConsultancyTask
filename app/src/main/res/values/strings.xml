@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Company Task</string>
+    <string name="home">Home</string>
+    <string name="fav">Fav</string>
+    <string name="by_name">By Name</string>
+    <string name="by_first_alpha">By First Alphabet</string>
+    <string name="search_drink_here">Search Drink Here</string>
+
+    <!--Notifications-->
+    <string name="feature_image" translatable="false">feature Image</string>
+    <string name="default_notification_channel_id" translatable="false">Message</string>
+    <string name="default_notification_channel_name" translatable="false">Message</string>
+    <string name="alcoholic">Alcoholic</string>
+</resources>
