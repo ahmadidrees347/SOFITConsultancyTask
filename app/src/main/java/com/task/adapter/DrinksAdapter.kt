@@ -32,14 +32,14 @@ class DrinksAdapter(
         notifyDataSetChanged()
     }
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        holder.bindData(drinksList[position])
+        holder.bindData(drinksList[position], position)
     }
 
     inner class ItemViewHolder(
         private val binding: ItemDrinkBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bindData(item: Drink) {
+        fun bindData(item: Drink, position: Int) {
             with(binding) {
                 Glide.with(context)
                     .load(item.strDrinkThumb)
@@ -61,7 +61,7 @@ class DrinksAdapter(
                     val newStatus = !it.isSelected
                     drinksList[adapterPosition].isFav = newStatus
                     favoriteListener?.invoke(item)
-                    notifyItemChanged(adapterPosition)
+                    notifyItemChanged(position)
                 }
             }
         }

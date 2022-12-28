@@ -25,8 +25,7 @@ abstract class LocalDatabase : RoomDatabase() {
 
         private fun buildDatabase(appContext: Context): LocalDatabase {
             return Room.databaseBuilder(appContext, LocalDatabase::class.java, DATABASE_NAME)
-                .fallbackToDestructiveMigration() // Data is cache, so it is OK to delete
-                .allowMainThreadQueries()
+                .fallbackToDestructiveMigration()
                 .build()
         }
     }
